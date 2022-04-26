@@ -1,0 +1,13 @@
+name: Main Checks
+
+on:
+  workflow_call:
+
+jobs: 
+  name: Lint
+  runs-on: ubuntu-latest
+  steps: 
+    - uses: actions/checkout@v3
+    - uses: bahmutov/npm-install@v1
+    - run: npm lint
+    
